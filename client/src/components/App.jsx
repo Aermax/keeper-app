@@ -12,7 +12,7 @@ function App() {
       return [...prevNotes, newNote];
     })
     try {
-      const response = await fetch('http://localhost:3000/', {
+      const response = await fetch('https://keeper-api-ivy2.onrender.com/', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -27,7 +27,7 @@ function App() {
   }
 
   function deleteNote(_id) {
-    fetch('http://localhost:3000/', {
+    fetch('https://keeper-api-ivy2.onrender.com/', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ function App() {
 
   async function findAllNotes() {
     try {
-      const Response = await fetch("http://localhost:3000/", {
+      const Response = await fetch("https://keeper-api-ivy2.onrender.com/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
